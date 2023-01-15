@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="minDiv"></div>
+    <button onclick="changeToRed('red',200,50)">change to red</button>
+    <button onclick="changeToRed('blue',400,75)">change to blue</button>
+    <br />
+    <div id="testDiv" style="font-size: small;">This is gonna change</div>
+    <button onclick="change('yellow','det er tekst','x-large')">Change</button>
+
+    <script>
+        function changeToRed(color,height,width,text) {
+            document.getElementById('minDiv').innerHTML = `<div style="background-color:${color}; width:${width}%; height:${height}px;"></div>`;
+            
+        }
+        function change(color,tekst,fontSize){
+            document.getElementById('testDiv').style.background = color;
+            document.getElementById('testDiv').innerHTML = tekst;
+            document.getElementById('testDiv').style.fontSize = fontSize;
+
+        }
+
+
+        //         function changeToBlue(color) {
+        //     document.getElementById('minDiv').innerHTML = `<div style="background-color:${color}; width:100px; height:100px;"></div>`;
+        // }
+</script>
+</body>
+</html>
